@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125184523) do
+ActiveRecord::Schema.define(version: 20151127123721) do
 
   create_table "forms", force: :cascade do |t|
     t.string   "first_name",           limit: 255
@@ -22,17 +22,13 @@ ActiveRecord::Schema.define(version: 20151125184523) do
     t.string   "work_experience",      limit: 255
     t.string   "highest_degree",       limit: 255
     t.string   "address",              limit: 255
-    t.string   "city",                 limit: 255
-    t.string   "state",                limit: 255
-    t.string   "country",              limit: 255
-    t.string   "pincode",              limit: 255
-    t.date     "birth_date"
     t.string   "type_job",             limit: 255
     t.string   "looking_job",          limit: 255
     t.string   "week_availability",    limit: 255
     t.string   "weekend_availability", limit: 255
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
+    t.string   "contact_no",           limit: 255
   end
 
 end

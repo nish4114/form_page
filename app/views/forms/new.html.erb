@@ -46,7 +46,7 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="exampleSelect1">gender</label>
+          <label for="exampleSelect1">Gender</label>
           <div class="input-group">
          <%= f.select :gender, options_for_select([["Male", "male"], ["Female", "female"]]), {}, :class => 'form-control' %>
           <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
@@ -55,7 +55,7 @@
 
 
         <div class="form-group">
-          <label for="InputEmail">Enter Email</label>
+          <label for="InputEmail">Email</label>
           <div class="input-group">
             <%= f.text_field :email, :class =>'form-control', :placeholder => 'Enter your Email', :required => true %>
             <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
@@ -83,44 +83,9 @@
           </div>
         </div>
         <div class="form-group">
-          <label for="InputEmail">Address</label>
+          <label for="InputEmail">Type your full Address</label>
           <div class="input-group">
-            <%= f.text_area :address, :class =>'form-control', :placeholder => 'Please Enter the Address' %>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="InputEmail">City</label>
-          <div class="input-group">
-            <%= f.text_field :city, :class =>'form-control', :placeholder => 'Please Enter City', :required => true %>
-            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="InputEmail">State</label>
-          <div class="input-group">
-            <%= f.text_field :state, :class =>'form-control', :placeholder => 'Please Enter State', :required => true %>
-            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="InputEmail">Country</label>
-          <div class="input-group">
-            <%= f.text_field :country, :class =>'form-control', :placeholder => 'Please Enter Country', :required => true %>
-            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="InputEmail">Pincode</label>
-          <div class="input-group">
-            <%= f.text_field :pincode, :class =>'form-control', :placeholder => 'Please Enter Pincode', :required => true %>
-            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="InputEmail">Date of Birth</label>
-          <div class="input-group">
-            <%= f.text_field :birth_date, :class =>'form-control', :placeholder => 'dd/mm/yyyy', :required => true %>
-            <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+            <%= f.text_area :address, :class =>'form-control', :placeholder => 'Please Enter the Address', :style => 'width: 200%' %>
           </div>
         </div>
         <div class="form-group">
@@ -149,10 +114,13 @@
             &nbsp;Evening <%= f.check_box :weekend_availability, {multiple: true}, 'evening', nil %> &nbsp; Night <%= f.check_box :weekend_availability, {multiple: true}, 'night', nil %>
           </div>
         </div>
-        <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-large btn-info ">
+        </br>
+        <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-large btn-info " style="width: 20%">
       </div>
     </form>
   </div>
 </div>
 
 <% end %>
+</br>
+</br>
