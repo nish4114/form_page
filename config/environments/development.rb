@@ -23,15 +23,15 @@ Rails.application.configure do
   config.active_record.migration_error = :page_load
   config.consider_all_requests_local       = false
   config.action_mailer.raise_delivery_errors = true
-  config.action_controller.perform_caching = true
   config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.perform_deliveries = true
   # SMTP settings for gmail
   config.action_mailer.smtp_settings = {
-      :address              => "smtp.gmail.com",
-      :port                 => 587,
-      :domain               => "gmail.com",
-      :user_name            => 'nishant.varshney4114@gmail.com',
-      :password             => 'mom@godyc12',
+      :address              => "smtpout.secureserver.net",
+      :port                 => 80,
+      :domain               => "jobzgo.com",
+      :user_name            => 'support.team@jobzgo.com',
+      :password             => 'jobzgo4114',
       :authentication       => "plain",
       :enable_starttls_auto => true
   }

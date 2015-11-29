@@ -22,13 +22,13 @@ ActiveRecord::Schema.define(version: 20151127123721) do
     t.string   "work_experience",      limit: 255
     t.string   "highest_degree",       limit: 255
     t.string   "address",              limit: 255
+    t.string   "contact_no",           limit: 255
     t.string   "type_job",             limit: 255
     t.string   "looking_job",          limit: 255
     t.string   "week_availability",    limit: 255
     t.string   "weekend_availability", limit: 255
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
-    t.string   "contact_no",           limit: 255
   end
 
 end
