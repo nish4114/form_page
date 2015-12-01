@@ -14,7 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 
+
 $(document).ready(function() {
-    alert('hey');
+
 
 });

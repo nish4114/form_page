@@ -12,7 +12,7 @@ class FormsController < ApplicationController
     twilio_phone_number = "719-428-4401"
   @form = Form.create(form_params)
     if @form.save
-
+     begin
       @twilio_client = Twilio::REST::Client.new twilio_sid, twilio_token
 
       @twilio_client.account.sms.messages.create(
@@ -20,9 +20,15 @@ class FormsController < ApplicationController
           :to => "+91#{number_to_send_to}",
           :body => "This is an message. It gets sent to #{number_to_send_to}"
       )
+     rescue Twilio::REST::RequestError => e
+       puts e.message
+     end
       FormMailer.registration_mail(@form).deliver
       redirect_to forms_path
     end
+  else
+    flash[:error] = @form.errors
+    render :new
   end
 
   def index
