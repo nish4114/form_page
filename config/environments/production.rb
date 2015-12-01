@@ -22,8 +22,8 @@ Rails.application.configure do
       :address              => "smtpout.secureserver.net",
       :port                 => 80,
       :domain               => "jobzgo.com",
-      :user_name            => 'support.team@jobzgo.com',
-      :password             => 'jobzgo4114',
+      :user_name            => 'support@jobzgo.com',
+      :password             => 'bangarang',
       :authentication       => "plain",
       :enable_starttls_auto => true
   }

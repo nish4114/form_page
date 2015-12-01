@@ -23,12 +23,17 @@ class FormsController < ApplicationController
      rescue Twilio::REST::RequestError => e
        puts e.message
      end
+     begin
       FormMailer.registration_mail(@form).deliver
+     rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
+       puts e.message
+     end
       redirect_to forms_path
-    end
+
   else
     flash[:error] = @form.errors
     render :new
+    end
   end
 
   def index
