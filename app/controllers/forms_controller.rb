@@ -18,7 +18,7 @@ class FormsController < ApplicationController
       @twilio_client.account.sms.messages.create(
           :from => "+1#{twilio_phone_number}",
           :to => "+91#{number_to_send_to}",
-          :body => "Thank You for registering with JobzGo, We will contact you very soon"
+          :body => "Thank You for registering with JobzGO, We will contact you very soon. \nRegards,\nTeam JobzGO"
       )
      rescue Twilio::REST::RequestError => e
        puts e.message
